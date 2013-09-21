@@ -17,10 +17,13 @@ define('ROLE_CLIENT',			'client');
 define('DEFAULT_QUERY_LIMIT', 10);
 
 define('SERVICE_KEYWORD', 'SERVICE');
+define('ON_KEYWORD', 'ON');
 define('PROMO_KEYWORD', 'PROMO');
 define('SMS_USERNAME', 'ravenjohn');
 define('SMS_PASSWORD', 'stratovate');
-define('SMS_ACCESS_CODE', '60802');
+
+define('SMS_ACCESS_CODE', '68002');
+
 
 /*
 |--------------------------------------------------------------------------
