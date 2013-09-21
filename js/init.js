@@ -32,14 +32,15 @@ function changeView(view,id){
 		opt = 'map';
 	}
 	if(checkAuth()){
-		alert("here..!!");
-		$('#side-content').load('pages/logout.html',sideAfterLoad());
+
 	} else{
-		$('#side-content').innerHTML = "";
-		$('#reload-content').innerHTML = "";
-		$('#side-content').load('pages/login.html',sideAfterLoad());
-		$('#reload-content').load('pages/'+view+'.html',contentAfterLoad(opt));
+			
 	}
+	$('#side-content').innerHTML = "";
+	$('#reload-content').innerHTML = "";
+
+	$('#side-content').load('pages/logout.html',sideAfterLoad());
+	$('#reload-content').load('pages/'+view+'.html',contentAfterLoad(opt));
 }
 function login(){
 	uname = document.getElementById('uname');		
@@ -82,6 +83,7 @@ function s_login(data){
 	type = data.type;
 	$.cookie('access_token', access_token,{path:'/'});
 	$.cookie('type', type,{path:'/'});
+	window.location = "/";
 }
 function s_logout(data){
 	access_token = data.access_token;
