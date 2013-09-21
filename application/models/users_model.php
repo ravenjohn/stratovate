@@ -69,9 +69,6 @@ class Users_model extends REST_Model
 	
 	public function contact_number_exists($contact_number)
 	{
-		if($this->exists_by_fields(array('email' => $email)) === true)
-		{
-			throw new Exception('Email is already bounded to an account.');
-		}
+		return $this->exists_by_fields(array('contact_number' => $contact_number));
 	}
 }
