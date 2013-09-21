@@ -99,14 +99,14 @@
 <header class='show-for-small'>
 	<nav class="top-bar" style='padding-left:5px;text-align:left;font-size:25px;'>
 		<div style='float:left'>
-			<a href="#sidr" id="up-button" class='sb-b'><i class="foundicon-people"></i></a>
+			<a href="#sidr" id="up-button" class='sb-b' title="Login"><i class="foundicon-people"></i></a>
 		</div>
 		<div style='float:right'>
-			<a href="#add" id="up-add-button" onclick="changeView('app_listing')" class='sb-b'><i class="foundicon-folder"></i></a>
+			<a href="#add" id="up-add-button" title="" onclick="changeView('app_listing')" class='sb-b'><i class="foundicon-folder"></i></a>
 			&nbsp;
-			<a href="#away" data-reveal-id="away" id="up-away-button" class='sb-b'><i class="foundicon-flag"></i></a>
+			<a href="#away" data-reveal-id="away" title="" id="up-away-button" class='sb-b'><i class="foundicon-flag"></i></a>
 			&nbsp;
-			<a href="#logout" id="up-logout-button" class='sb-b'><i class="foundicon-error"></i></a>
+			<a href="#logout" id="up-logout-button" title="" class='sb-b'><i class="foundicon-error"></i></a>
 			&nbsp;
 		</div>
   	
