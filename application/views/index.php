@@ -7,8 +7,6 @@
 	<link rel="stylesheet" type="text/css" href="css/jquery.sidr.dark.css">
 	<link rel="stylesheet" type="text/css" href="fonts/stylesheets/general_foundicons.css">
 	<script src="js/vendor/custom.modernizr.js"></script>
-	<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDY0kkJiTPVd2U7aTOAwhc9ySH6oHxOIYM&sensor=false">
-	</script>
 	<script type='text/javascript'>
 		var current_est = "";	
 
@@ -196,6 +194,6 @@
 	<script type='text/javascript'>
 		$(document).foundation();
 	</script>
-
+	<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDY0kkJiTPVd2U7aTOAwhc9ySH6oHxOIYM&sensor=false"></script>
 </body>
 </html>
