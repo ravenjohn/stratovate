@@ -18,6 +18,7 @@ CREATE TABLE services(
 	id int(11) auto_increment primary key,
 	establishment_id int(11) not null,
 	service_name varchar(256) not null,
+	code varchar(256) not null,
 	date_created TIMESTAMP DEFAULT CURRENT_TIMESTAMP not null,
 	date_updated TIMESTAMP null
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
@@ -68,3 +69,4 @@ CREATE TABLE features(
 	date_created TIMESTAMP DEFAULT CURRENT_TIMESTAMP not null,
 	date_updated TIMESTAMP null
 );
+
