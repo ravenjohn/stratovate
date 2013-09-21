@@ -1,0 +1,46 @@
+admin
+establishment
+client
+
+admin
+	view features
+	manage establishments
+	manage users
+
+establishment
+	manage users
+	acccept subscriptions
+	accept requests | formatted
+	manage services
+	request feature
+	
+client
+	view services
+	request
+	
+features
+	map
+	greet users in their bday
+	manage promos | redeem promos
+	
+	
+LAUNDRY
+
+client subscribes - txt
+establishment save user - web
+view services - txt
+request service - txt
+establishment accept request - web -> confirm
+
+API:
+login
+get features
+get establishments
+get users
+get users within establishment
+get all requests / by type
+create service
+edit service
+request a new feature
+get services
+create a request
