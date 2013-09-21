@@ -977,5 +977,40 @@ class REST_Controller extends CI_Controller
 			throw new Exception('I\'m sorry but the ' . $name . ' did not match one of these: ' . implode(', ', $array), 400);
 		}		
 	}
+	
+		/**
+	 * Simple CURL
+	 *
+	 * @param	string	$method		HTTP METHOD
+	 * @param	string	$url		url
+	 * @param	array	$fields		payload
+	 */
+	protected static function curl($method, $url, $fields=array())
+	{
+		//format fields
+		$fields_string = array('message' => json_encode($fields));
+
+		//open connection
+		$ch = curl_init();
+
+		//set the url, number of POST vars, POST data
+		curl_setopt($ch,CURLOPT_URL, $url);
+		curl_setopt($ch,CURLOPT_RETURNTRANSFER, TRUE);
+		
+		if($method=='POST')
+		{
+			curl_setopt($ch,CURLOPT_POST, 1);
+			curl_setopt($ch,CURLOPT_POSTFIELDS, $fields_string);
+		}
+
+		//execute post
+		$result = curl_exec($ch);
+
+		//close connection
+		curl_close($ch);
+
+		//decode to array
+		return json_decode($result,true);
+	}
 }
 
