@@ -87,12 +87,33 @@ class Callback extends REST_Controller
 			$this->reply('Invalid code.');
 		}
 		else{
+			$data = array();
+			if(!$this->users_model->contact_number_exists($this->userNumber))
+			{
+				$data['name'] = 'anon';
+				$data['contact_number'] = $this->userNumber;
+				$data['type'] = ROLE_CLIENT;
+				$user = $this->users_model->create($data);
+			}
+			else
+			{
+				$users = $this->users_model->get_by_fields(array('contact_number' => $this->userNumber));
+				$user = $users[0];
+			}
 			
+			$this->load->model('services');
+			$services = $this->services_model->get_by_fields(array('code' => $code));
+			$service = $services[0];
 			
 			$this->load->model('requests');
 			$data = array();
-			$data[]
+			$data['user_id'] = $user['id'];
+			$data['establishment_id'] = $service['establishment_id'];
+			$data['service_id'] = $service['id'];
 			$this->requests_model->create($data);
+			
+			
+			$this->reply('Your request is now being processed. You will be notified later.');
 		}
 	}
 	
