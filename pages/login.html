@@ -1,4 +1,4 @@
-		<form id='side-content-login' style='margin-top:150px;'>
+		<form id='side-content-login' style='margin-top:150px;' onsubmit='return false' method='post'>
 			<strong><span>Establishment Login</span></strong>
 			<br/>
 			<br/>
@@ -6,5 +6,5 @@
 			<input type='text' name='uname' id='uname'/>
 			<h4>Password</h4>
 			<input type='password' name='password' id='password'/>
-			<button class='expand success button'>Login</button>
+			<button class='expand success button' onclick="login()">Login</button>
 		</form>

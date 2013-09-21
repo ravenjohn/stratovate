@@ -181,6 +181,7 @@
 
 
 	<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+	<script src="js/jquery.cookie.js"></script>
 	<script src="js/foundation.min.js"></script>
 
 	 <script src="js/jquery.sidr.min.js"></script>
@@ -194,6 +195,7 @@
 	<script type='text/javascript'>
 		$(document).foundation();
 	</script>
-	<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDY0kkJiTPVd2U7aTOAwhc9ySH6oHxOIYM&sensor=false"></script>
+	<!--<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDY0kkJiTPVd2U7aTOAwhc9ySH6oHxOIYM&sensor=false"></script>
+	--><script src="js/routes.js"></script>
 </body>
 </html>
