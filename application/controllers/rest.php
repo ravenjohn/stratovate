@@ -24,7 +24,7 @@ class Rest extends REST_Controller
 			$name		= substr($filename, 0, strrpos($filename, '.'));
 			$classname	= ucfirst($name);
 			
-			if ($classname === 'Rest' || (!config_item('rest_enable_oauth') && $classname === 'Oauth'))
+			if ($classname === 'Admin' || $classname === 'Rest' || (!config_item('rest_enable_oauth') && $classname === 'Oauth'))
 			{
 				continue;
 			}
