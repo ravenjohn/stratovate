@@ -25,4 +25,8 @@ class Services extends REST_Controller
 		$data				= $this->services_model->create($data);
 		$this->response($data);
 	}
+    public function index_get(){
+        $data = $this->services_model->get_all();
+        return $data;
+    }
 }

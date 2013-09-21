@@ -133,10 +133,25 @@ function fail_req(data){
 	alert(obj.error);
 }
 function setupAdmin(){
+	var form_data = {
+		access_token: $.cookie('access_token')
+	}
+
 	router.setMethod('get');
-	router.setTargetUrl('/services/establishments');
-	router.setParams({});
-	events.setCurrentEvent('buildEst(data)');
+	router.setTargetUrl('/services');
+	router.setParams(form_data);
+	events.setCurrentEvent('buildRequest(data)');
 	events.setErrorEvent('fail_req(data)');
 	router.connect();	
+}
+function buildRequest(data){
+	console.log(data);
+	// str = "";
+	// rec = data.records;
+	// for(i=0;i<rec.length;i++){
+	// 	str+= "<tr><td><a href='#' onclick=\"changeView('app_page','"+rec[i].id+"')\">"+rec[i].name+"</a></td><td><p>Description here</p></td><td>Contact Number:"+rec[i].contact_number+"</td></tr>";
+	// }
+	// tb = document.getElementById('req-table');
+	// tb.innerHTML = "";
+	// tb.innerHTML = str;	
 }

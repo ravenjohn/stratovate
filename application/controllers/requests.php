@@ -27,4 +27,8 @@ class Requests extends REST_Controller
 			
 		$this->response($data);
 	}
+	public function index_get(){
+        $data = $this->request_model->get_all();
+        return $data;
+    }
 }
