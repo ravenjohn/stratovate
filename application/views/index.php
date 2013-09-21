@@ -104,7 +104,7 @@
 		<div style='float:right'>
 			<a href="#add" id="up-add-button" title="" onclick="changeView('app_listing')" class='sb-b'><i class="foundicon-folder"></i></a>
 			&nbsp;
-			<a href="#away" data-reveal-id="away" title="" id="up-away-button" class='sb-b'><i class="foundicon-flag"></i></a>
+			<a href="#away" onclick="changeView('admin')" id="up-away-button" class='sb-b'><i class="foundicon-flag"></i></a>
 			&nbsp;
 			<a href="#logout" id="up-logout-button" title="" class='sb-b'><i class="foundicon-error"></i></a>
 			&nbsp;
@@ -116,7 +116,7 @@
 <ul class="side-nav">
 		<li><a href="#sidr" id="left-button" class='sb-b'><i class="foundicon-people"></i></a></li>
 		<li class='sb-b'><a href="#sidr" onclick="changeView('app_listing')" id="left-button" class='sb-b'><i class="foundicon-folder"></i></a></li>
-  	<li class='sb-b'><a href="#sidr" data-reveal-id="away" id="left-button" class='sb-b'><i class="foundicon-flag"></i></a></li>
+  	<li class='sb-b'><a href="#sidr" onclick="changeView('admin')" id="left-button" class='sb-b'><i class="foundicon-flag"></i></a></li>
   	<li class='sb-b'><a href="#sidr" id="left-button" class='sb-b'><i class="foundicon-error"></i></a></li>
 	
 </ul>

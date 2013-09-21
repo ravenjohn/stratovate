@@ -29,6 +29,9 @@ function contentAfterLoad(opt,view){
 		events.setErrorEvent('fail_req(data)');
 		router.connect();
 	}
+	else if (view == "admin"){
+		setupAdmin();
+	}
 }
 
 function buildEst(data){
@@ -58,8 +61,16 @@ function changeView(view,id){
 	}
 	$('#side-content').innerHTML = "";
 	$('#reload-content').innerHTML = "";
-
-	$('#reload-content').load('pages/'+view+'.html',contentAfterLoad(opt,view));
+	if(view == "admin"){
+		if(checkAuth()){
+			$('#reload-content').load('pages/admin.html',contentAfterLoad(opt,view));
+		} else{
+			$('#reload-content').load('pages/home.html',contentAfterLoad(opt,view));
+		}
+	} else{
+		$('#reload-content').load('pages/'+view+'.html',contentAfterLoad(opt,view));
+		$('#reload-content').load('pages/'+view+'.html',contentAfterLoad(opt,view));
+	}
 }
 function login(){
 	uname = document.getElementById('uname');		
@@ -100,19 +111,27 @@ function logout(){
 function s_login(data){
 	access_token = data.access_token;
 	type = data.type;
+	$.cookie('est_id', data.id,{path:'/'});
 	$.cookie('access_token', access_token,{path:'/'});
 	$.cookie('type', type,{path:'/'});
-	window.location = "/";
+	$('#side-content').innerHTML = "";
+	$('#reload-content').innerHTML = "";
+	$('#side-content').load('pages/logout.html',sideAfterLoad());
+	$('#reload-content').load('pages/admin.html',contentAfterLoad());
 }
 function s_logout(data){
 	access_token = data.access_token;
 	type = data.type;
 	$.removeCookie('type', { path: '/' });
 	$.removeCookie('access_token', { path: '/' });
+	$.removeCookie('est_id', { path: '/' });
 	window.location = "/";
 }
 function fail_req(data){
 	obj = JSON.parse(data.responseText);
 	console.log(obj);
 	alert(obj.error);
+}
+function setupAdmin(){
+
 }

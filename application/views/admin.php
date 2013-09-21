@@ -169,16 +169,6 @@
 <div id='add-time' class="reveal-modal">
 </div>
 
-<div id='away' class="reveal-modal" style='text-align:left;'>
-	<h4>I will not be able to work today..!</h4>
-	<p>Reason:</p>
-	<textarea>
-	</textarea>
-	<br/>
-	<button class='expand alert button'> Confirm </button>
-	<a class="close-reveal-modal">&#215;</a>
-</div>
-
 
 	<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
 	<script src="js/foundation.min.js"></script>
