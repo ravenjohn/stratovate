@@ -1,0 +1,17 @@
+"think big, start small".
+
+sMSME (SMS me) (SMS in Micro, Small, and Medium Enterprises)
+is an application that helps micro, small and medium enterprises by enhancing data management, communication and clients' user experience using SMS.
+
+Example
+	you're owning a small laundry shop, usually client's come at you and bring their laundries. What if you're on a holiday? An enhanced user experience using SMS would result to, asking the laundry's availability or receiving notifications of laundry's availability.
+	It's also tiring for the shop to save the clients' phone numbers and details one by one.
+			1.5hr massage 10pm, please send Joy
+
+	book in a carwash
+	haircut, notify if your turn is near
+	
+	organized
+	wala sa notebook
+	promos
+	feedback
