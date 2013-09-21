@@ -123,7 +123,8 @@
 </div>
 <div id='content'>
 	<div class='row' style='width:100%;'>
-		<div class='small-12 large-12 columns' id='head' style='text-align:right;width:100%;'>
+		<h1 style="float: left; width: 400px;">SMS in Micro, Small, and <br />Medium Enterprises</h1>
+		<div id='head' style='width:200px; float: right;'>
 			<h2 id='name-head'>sMSME</h2>
 		</div>	
 	</div>
