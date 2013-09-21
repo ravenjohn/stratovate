@@ -37,3 +37,6 @@ function changeView(view,id){
 		$('#reload-content').load('pages/'+view+'.html',contentAfterLoad(opt));
 	}
 }
+function login(){
+		
+}
