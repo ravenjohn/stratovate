@@ -9,17 +9,15 @@ admin
 
 establishment
 	manage users
-	acccept subscriptions
 	accept requests | formatted
-	manage services
 	request feature
+	manage services
 	
 client
 	view services
 	request
 	
 features
-	map
 	greet users in their bday
 	manage promos | redeem promos
 	
@@ -34,12 +32,14 @@ establishment accept request - web -> confirm
 
 API:
 login
+logout
+create establishment
+create service
 get features
 get establishments
 get users
 get users within establishment
 get all requests / by type
-create service
 edit service
 request a new feature
 get services

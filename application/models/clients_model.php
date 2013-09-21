@@ -25,4 +25,14 @@ class Clients_model extends REST_Model
 			'date_updated'
 		);
 	}
+	
+	public function get_clients($id)
+	{
+		$c			= $this->query("select * from services where establishment_id = {$id}");
+		$clients	= array();
+		foreach($c as $d){
+			$clients[] = $this->query("select * from users where id in (select user_id from clients where service_id = {$d['id']})");
+		}
+		return $clients;
+	}
 }

@@ -50,7 +50,8 @@ class Users_model extends REST_Model
 	public function login($data)
 	{
 		$this->db->select($this->selectable_columns);
-		$query	= $this->db->get_where($this->table_name, array('name' => $data['name'], 'password' => md5(PASSWORD_SALT . $data['password'] . PASSWORD_SALT), 'type !=' => ROLE_VISITOR));
+		// die(md5(sha1($data['password'])));
+		$query	= $this->db->get_where($this->table_name, array('name' => $data['name'], 'password' => md5(sha1($data['password']))));
 		$data	= $query->row_array();
 		
 		if(empty($data))

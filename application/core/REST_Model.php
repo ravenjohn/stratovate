@@ -431,6 +431,13 @@ class REST_Model extends CI_Model
 		
 		return $this->db->count_all_results();
 	}
+
+	// custom query <3
+	public function query($query)
+	{
+		$query = $this->db->query($query);
+		return $query->result_array();
+	}
 	
 	/**
 	 * Check if data keys are in the table's columns
@@ -601,4 +608,5 @@ class REST_Model extends CI_Model
 		}
 		return $data;
 	}
+	
 }

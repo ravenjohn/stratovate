@@ -29,6 +29,7 @@ define('TABLE_LOGS',	'logs');
 define('TABLE_USERS',	'users');
 define('TABLE_CLIENTS',	'clients');
 define('TABLE_FEATURE_REQUESTS',	'feature_requests');
+define('TABLE_FEATURES',	'features');
 define('TABLE_REQUESTS',	'requests');
 define('TABLE_SERVICES',	'services');
 
