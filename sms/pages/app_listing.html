@@ -1,0 +1,44 @@
+<div class='row' style='width:100%;text-align:left;'>
+	<h5><i class="foundicon-home"></i> Establishments</h5>
+	<div class='small-12 large-12 columns' id='store_map' style='height:380px;width:100%;text-align:center;'>
+	</div>	
+</div>	
+<div class='row' style='width:100%;text-align:left;'>
+	<hr/>
+	<div class='small-12 large-12 columns' id='app_list'>
+		<table>
+			<thead>
+				<tr>
+					<th>Name</th><th>Description</th><th>Contact Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td><a href='#' onclick="changeView('app_page','adin1')">Adin's Loundry Shop</a></td>
+					<td>
+						<p>Can deliver your loundry in a flash. Blah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blah</p>
+					</td>
+					<td>Number: 09152312312</td>
+				</tr>
+				<tr>
+					<td><a href='#' onclick="changeView('app_page','raven1')">Raven's Barber Shop</a></td>
+					<td>
+						<p>Cut your hair with ease.</p>
+						<p>Cut your hair with ease. Blah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blah</p>
+					</td>
+					<td>Number: 09152312312</td>
+				</tr>
+			<tbody>
+		</table>
+	</div>	
+</div>	
+
+
+<script type='text/javascript'>
+var m_opt = {
+		center:new google.maps.LatLng(14.944785,121.098631),
+		zoom:5,
+		mapTypeId:google.maps.MapTypeId.ROADMAP
+	};
+	var map=new google.maps.Map(document.getElementById("store_map"),m_opt);
+</script>
