@@ -12,22 +12,8 @@
 					<th>Name</th><th>Description</th><th>Contact Details</th>
 				</tr>
 			</thead>
-			<tbody>
-				<tr>
-					<td><a href='#' onclick="changeView('app_page','adin1')">Adin's Loundry Shop</a></td>
-					<td>
-						<p>Can deliver your loundry in a flash. Blah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blah</p>
-					</td>
-					<td>Number: 09152312312</td>
-				</tr>
-				<tr>
-					<td><a href='#' onclick="changeView('app_page','raven1')">Raven's Barber Shop</a></td>
-					<td>
-						<p>Cut your hair with ease.</p>
-						<p>Cut your hair with ease. Blah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blah</p>
-					</td>
-					<td>Number: 09152312312</td>
-				</tr>
+			<tbody id='app-list-td'>
+
 			<tbody>
 		</table>
 	</div>	
@@ -35,7 +21,7 @@
 
 
 <script type='text/javascript'>
-var m_opt = {
+	var m_opt = {
 		center:new google.maps.LatLng(14.944785,121.098631),
 		zoom:5,
 		mapTypeId:google.maps.MapTypeId.ROADMAP

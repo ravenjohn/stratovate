@@ -20,9 +20,29 @@ function checkAuth(){
 function sideAfterLoad(){
 
 }
-function contentAfterLoad(opt){
-
+function contentAfterLoad(opt,view){
+	if(view == "app_listing"){
+		router.setMethod('get');
+		router.setTargetUrl('/users/establishments');
+		router.setParams({});
+		events.setCurrentEvent('buildEst(data)');
+		events.setErrorEvent('fail_req(data)');
+		router.connect();
+	}
 }
+
+function buildEst(data){
+	console.log(data);
+	str = "";
+	rec = data.records;
+	for(i=0;i<rec.length;i++){
+		str+= "<tr><td><a href='#' onclick=\"changeView('app_page','"+rec[i].id+"')\">"+rec[i].name+"</a></td><td><p>Description here</p></td><td>Contact Number:"+rec[i].contact_number+"</td></tr>";
+	}
+	tb = document.getElementById('app-list-td');
+	tb.innerHTML = "";
+	tb.innerHTML = str;
+}
+
 function changeView(view,id){
 	if(id != null){
 		current_est = id;
@@ -32,15 +52,14 @@ function changeView(view,id){
 		opt = 'map';
 	}
 	if(checkAuth()){
-
+		$('#side-content').load('pages/logout.html',sideAfterLoad());
 	} else{
-			
+		$('#side-content').load('pages/login.html',sideAfterLoad());
 	}
 	$('#side-content').innerHTML = "";
 	$('#reload-content').innerHTML = "";
 
-	$('#side-content').load('pages/logout.html',sideAfterLoad());
-	$('#reload-content').load('pages/'+view+'.html',contentAfterLoad(opt));
+	$('#reload-content').load('pages/'+view+'.html',contentAfterLoad(opt,view));
 }
 function login(){
 	uname = document.getElementById('uname');		
