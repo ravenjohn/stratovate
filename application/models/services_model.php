@@ -14,6 +14,7 @@ class Services_model extends REST_Model
 			'establishment_id',
 			'service_name',
 			'description',
+			'code',
 			'date_created',
 			'date_updated'
 		);
@@ -23,6 +24,7 @@ class Services_model extends REST_Model
 			'establishment_id',
 			'service_name',
 			'description',
+			'code',
 			'date_created',
 			'date_updated'
 		);

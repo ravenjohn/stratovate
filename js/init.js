@@ -134,7 +134,7 @@ function fail_req(data){
 }
 function setupAdmin(){
 	router.setMethod('get');
-	router.setTargetUrl('/users/establishments');
+	router.setTargetUrl('/services/establishments');
 	router.setParams({});
 	events.setCurrentEvent('buildEst(data)');
 	events.setErrorEvent('fail_req(data)');

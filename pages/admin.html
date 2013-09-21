@@ -18,8 +18,10 @@
 		<form onsubmit='return false'>
 			<input type='text' id='s-name' placeholder='name'/>
 			<input type='text' id='s-code' placeholder='code'/>
+			<input type='text' id='s-desc' placeholder='description'/>
 			<button onclick='addService()'>Add Service</button>
-		<form>
+		</form>
+		<br/>
 		<table id='st'>
 			<thead>
 			<th>
@@ -39,6 +41,21 @@
 
 <script type='text/javascript'>
 	function addService(){
-		
+		var form_data = {
+			access_token: $.cookie('access_token'),
+			establishment_id: $.cookie('est_id'),
+			service_name: document.getElementById('s-name').value,
+			description: document.getElementById('s-desc').value,
+			code: document.getElementById('s-code').value
+		}
+		router.setMethod('post');
+		router.setTargetUrl('/services/create');
+		router.setParams(form_data);
+		events.setCurrentEvent('addedServ(data)');
+		events.setErrorEvent('fail_req(data)');
+		router.connect();	
+	}
+	function addedServ(data){
+		console.log(data);
 	}
 </script>
